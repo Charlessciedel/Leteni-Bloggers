@@ -1,5 +1,6 @@
 # Import db from app factory
-from app import create_app,db
+from app import create_app
+from app import db
 from flask_script import Manager,Server
 # Connect to models
 from app.models import User,Blog,Comment
@@ -20,7 +21,7 @@ migrate = Migrate(app,db)
 
 manager.add_command('server',Server)
 manager.add_command('db',MigrateCommand)
-app.config["DEBUG"]= True
+
 @manager.command
 def test():
     '''
