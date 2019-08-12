@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+<!-- Navbar block -->
+{% block navbar %}
+    <div class="container-fluid " style="background-image:url("https://wallpapercave.com/wp/wp2495956.jpg")>
+
+        <div class="navbar navbar-inverse near-moon-gradient" role="navigation" >
+
+            <div class="container-fluid" >
+
+                <div class="navbar-header">
+
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+
+                    </button>
+
+
+                </div>
+
+                <div class="navbar-collapse collapse">
+
+                    <ul  class="nav navbar-nav" >
+
+                        <li>
+                            <a style="font-size: 20px; margin-top:5px; color:black"" href="/">Home</a>
+                        </li>
+                        <li>
+                            <a style="font-size: 20px; margin-top:5px; color:black" href="/blogs">Blogs</a>
+                        </li>
+                        
+                        {% if current_user.is_authenticated %}
+                        <li>
+                            <a style="font-size: 20px; margin-top:5px; color:black" href="{{url_for('main.account',uname=current_user.username)}}">Account</a>
+                        </li>
+                        <li>
+                            <a style="font-size: 20px; margin-top:5px; color:black" href="{{url_for('auth.logout')}}">Log out</a>
+                        </li>
+                        {% else %}
+                        <li>
+                            <a style="font-size: 20px; margin-top:5px; color:black" href="{{url_for('auth.login')}}">Log in</a>
+                        </li>
+                        {%endif%}
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+{% endblock %}
