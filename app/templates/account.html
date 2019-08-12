@@ -1,11 +1,11 @@
-<!-- {% extends 'base.html' %}
+{% extends 'base.html' %}
 
 <!-- Content block -->
-{% block content %} -->
+{% block content %}
 
-<!-- <head>
+<head>
     <!-- Google Fonts -->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Rokkitt" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rokkitt" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
     <!-- Bootstrap core CSS -->
@@ -16,7 +16,7 @@
 </head>
 
 
-    <!-- <div class="rare-wind-gradient" style="text-align: center">
+    <div class="rare-wind-gradient" style="text-align: center">
         <div class="container">
 
             <h1>Profile</h1>
@@ -27,8 +27,8 @@
     
         <div class="container-fluid">
             <div class="row">
-                <div> --> -->
-                    <!-- {% if user.profile_pic_path %}style="padding: 20px;"alt="" class="img-thumbnail" id="profpic"
+                <div>
+                    {% if user.profile_pic_path %}style="padding: 20px;"alt="" class="img-thumbnail" id="profpic"
                         <img src="{{url_for('static',filename=user.profile_pic_path)}}" alt="" class="img-thumbnail" id="profpic">
                     {%else%}
                     <div class="row">
@@ -88,7 +88,7 @@
             <br>
             {% endfor %}
                     <div class="row" style="padding: 10px;" >
-                                 -->
+                                
                                 <a class="btn btn-primary btn-sm" href="/blogs" role="button" >Add a blog</a>
                     </div>
                 </div>
@@ -96,4 +96,4 @@
     </div>
    
 
-{% endblock %} -->
+{% endblock %}
