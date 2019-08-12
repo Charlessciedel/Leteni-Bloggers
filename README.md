@@ -103,4 +103,4 @@ Copyright (c) 2019, emma
 Emmasharon/Blog-Site
 
 
-Copyright (c)2018 **Emmasharon**
+Copyright (c)2018 **Charles Schiedel**
