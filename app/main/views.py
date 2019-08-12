@@ -6,35 +6,35 @@ from .. import db
 from ..models import User,Blog,Comment
 from ..requests import get_quotes
 
-# # Views
-# @main.route('/')
-# def index():
+ Views
+@main.route('/')
+def index():
 
-#     '''
-#     View root page function that returns the index page and its data
-#     '''
+    '''
+    View root page function that returns the index page and its data
+    '''
 
-#     title = 'Home'
-#     quotes = get_quotes()
+    title = 'Home'
+    quotes = get_quotes()
 
-#     return render_template('index.html', title = title, quotes=quotes )
+    return render_template('index.html', title = title, quotes=quotes )
 
-# @main.route('/account/<uname>',methods=['GET','POST'])
-# @login_required
-# def account(uname):
+@main.route('/account/<uname>',methods=['GET','POST'])
+@login_required
+def account(uname):
 
-#     '''
-#     View root page function that returns the profile page and its data
-#     '''
+    '''
+    View root page function that returns the profile page and its data
+    '''
 
-#     title = 'Profile'
-#     user = User.query.filter_by(username = uname).first()
+    title = 'Profile'
+    user = User.query.filter_by(username = uname).first()
 
-#     if user is None:
-#         abort(fourOwffour)
-#     blogs = Blog.query.order_by(Blog.posted.desc()).all()
+    if user is None:
+        abort(fourOwffour)
+    blogs = Blog.query.order_by(Blog.posted.desc()).all()
     
-#     return render_template('account.html', user = user, blogs=blogs)
+    return render_template('account.html', user = user, blogs=blogs)
 
 # @main.route('/update/<uname>',methods=['GET','POST'])
 # @login_required
