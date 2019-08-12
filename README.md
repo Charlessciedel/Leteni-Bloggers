@@ -1,11 +1,10 @@
-# Flask template
-#### Hey! I am a Bloggy
+# Flask Blog
+#### This is an online platform where a user can add their own blogs, read blogs posts by other users, as well as maintain their own profiles by deleting personal blog articles or deleting posts they don't like., 08/07/2019
 
 ## Description
-This is a flask application for blogging. Users have to sign up to blog and view blogs. A quotes app is used to display random on the home page.
-
+This is an online platform where a user can add their own blogs, read blogs posts by other users, as well as maintain their own profiles by deleting personal blog articles or deleting posts they don't like., 12/08/2019
 #### Link to deployed site
-https://bloggy254.herokuapp.com/
+https://schiedelblog.herokuapp.com/
 
 ## Table of content
 1. [Description](#description)
@@ -15,14 +14,15 @@ https://bloggy254.herokuapp.com/
 5. [Contact me](#support-and-contact-details)
 6. [Licensing](#license)
 
-## BDD
-| Behavior           | Input                 | Outcome                            |
-| -------------------|-----------------------| -----------------------------------|
-| request page       | click horuku link url | view other blogs          |
-| click on a pitch   |                       | vote/comment                       |
-| sign in/up         | details pass & user   | view,blog & comment               |
 
 ## Setup and installations
+* Fork the data onto your own personal repository.
+* Clone Project to your machine
+* Activate a virtual environment on terminal: `source virtual/bin/activate`
+* Install all the requirements found in requirements file.
+* On your terminal run `chmod a+x start.py`
+* On your terminal run `./start.py`
+* Access the live site using the local host provided
 
 #### Prerequisites
 1. [Python3.6](https://www.python.org/downloads/)
@@ -33,14 +33,14 @@ https://bloggy254.herokuapp.com/
 #### Technologies used
     - Python 3.6
     - HTML
-    - Bootstrap 4
+    - MDBootstrap 
     - Heroku
     - Postgresql
     - Flask
 
 #### Clone the Repo and rename it to suit your needs.
 ```bash
-git clone git@github.com:emmasharon/Blog-Site.git
+git clone https://github.com/Charlessciedel/Leteni-Bloggers.git
 ```
 #### Initialize git and add the remote repository
 ```bash
@@ -62,7 +62,7 @@ source virtual/bin/activate
 #### Setting up environment variables
 Create a `.env` file and paste paste the following filling where appropriate:
 ```
-SECRET_KEY='qwerty12345'
+SECRET_KEY='<Secret_key>'
 DEBUG=True
 ```
 
@@ -86,7 +86,7 @@ Open [localhost:5000](http://127.0.0.1:5000/)
 Please read this [comprehensive guide](https://opensource.guide/how-to-contribute/) on how to contribute. Pull requests are welcome :-)
 
 ## Bugs
-None
+Create an issue mentioning the bug you have found
 
 #### Known bugs
  - N/A
@@ -94,13 +94,9 @@ None
 
 
 ## Support and contact details
-Contact [Emmasharon](emmasharon19@gmail.com) for further help/support
+Contact [Charles Schiedel](charlesschiedel@gmail.com) for further help/support
 
 ### License
+[MIT LICENSE](LICENSE)
 
-The project is licensed under MIT license https://opensource.org/licenses/MIT
-Copyright (c) 2019, emma
-Emmasharon/Blog-Site
-
-
-Copyright (c)2018 **Charles Schiedel**
+Copyright (c)2019 **Charles Schiedel**
