@@ -18,33 +18,33 @@ class User(UserMixin,db.Model):
     pass_secure = db.Column(db.String(255))
     blogs = db.relationship('Blog',backref = 'user',lazy = "dynamic")
 
-#     @property
-#     def password(self):
-#         raise AttributeError('You cannot read the password attribute')
+    @property
+    def password(self):
+        raise AttributeError('You cannot read the password attribute')
 
-#     @password.setter
-#     def password(self, password):
-#         self.pass_secure = generate_password_hash(password)
+    @password.setter
+    def password(self, password):
+        self.pass_secure = generate_password_hash(password)
 
 
-#     def verify_password(self,password):
-#         return check_password_hash(self.pass_secure,password)
+    def verify_password(self,password):
+        return check_password_hash(self.pass_secure,password)
 
-#     def __repr__(self):
-#         return f'User {self.username}'
+    def __repr__(self):
+        return f'User {self.username}'
 
-# class Blog(db.Model):
+class Blog(db.Model):
 
-#     __tablename__ = 'blogs'
+    __tablename__ = 'blogs'
 
-#     id = db.Column(db.Integer,primary_key = True)
-#     # upvotes = db.Column(db.Integer)
-#     # downvotes = db.Column(db.Integer)
-#     title = db.Column(db.String)
-#     content = db.Column(db.String)
-#     posted = db.Column(db.DateTime,default=datetime.utcnow)
-#     user_id = db.Column(db.Integer,db.ForeignKey("users.id"))
-#     comments = db.relationship('Comment',backref = 'blogs',lazy = "dynamic")
+    id = db.Column(db.Integer,primary_key = True)
+    # upvotes = db.Column(db.Integer)
+    # downvotes = db.Column(db.Integer)
+    title = db.Column(db.String)
+    content = db.Column(db.String)
+    posted = db.Column(db.DateTime,default=datetime.utcnow)
+    user_id = db.Column(db.Integer,db.ForeignKey("users.id"))
+    comments = db.relationship('Comment',backref = 'blogs',lazy = "dynamic")
 
 #     def save_blog(self):
 #         db.session.add(self)
