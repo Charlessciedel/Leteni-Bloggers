@@ -23,11 +23,11 @@ class ProdConfig(Config):
     
     
 
-# class TestConfig(Config):
-#     '''
-#     Testing configuration child class
-#     Args:Config: The parent configuration class with General configuration settings 
-#     '''
+class TestConfig(Config):
+    '''
+    Testing configuration child class
+    Args:Config: The parent configuration class with General configuration settings 
+    '''
     
     
 
